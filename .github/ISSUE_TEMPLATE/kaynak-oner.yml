@@ -1,0 +1,43 @@
+name: Kaynak öner
+description: Listeye yeni bir eğitim kaynağı önerin, topluluk üyesi kanalınızı bildirin ya da bir kaydı düzeltin.
+title: "[Eğitim] "
+labels: ["kaynak-önerisi"]
+body:
+  - type: dropdown
+    id: islem
+    attributes:
+      label: İşlem
+      options: ["Yeni kaynak", "Topluluk üyesi kanalı / içeriği", "Mevcut kaydı düzelt", "Bağlantı çalışmıyor"]
+    validations: { required: true }
+  - type: input
+    id: ad
+    attributes: { label: Kaynağın adı, placeholder: "Örn. QGIS ile tematik harita yapımı (YouTube kanalı)" }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Bağlantı (URL), placeholder: "https://…" }
+    validations: { required: true }
+  - type: dropdown
+    id: tur
+    attributes:
+      label: Tür
+      options: ["Video kanalı", "Video listesi", "Öğrenme yolu", "Eğitim platformu", "Kitap", "Kılavuz", "Makale", "Katalog", "Diğer"]
+  - type: input
+    id: konu
+    attributes: { label: Konu, placeholder: "QGIS, ArcGIS, R, Python, Kartografya, Uzaktan algılama…" }
+  - type: dropdown
+    id: dil
+    attributes:
+      label: Dil
+      options: ["Türkçe", "İngilizce", "Türkçe ve İngilizce", "Diğer"]
+  - type: dropdown
+    id: seviye
+    attributes:
+      label: Seviye
+      options: ["Başlangıç", "Orta", "İleri", "Her seviye"]
+  - type: input
+    id: hazirlayan
+    attributes: { label: Hazırlayan (kanal sahibi / yazar), description: "Topluluk üyesiyseniz adınızı ve sınıfınızı yazabilirsiniz." }
+  - type: textarea
+    id: aciklama
+    attributes: { label: Kısa açıklama, description: "1–2 cümle: ne öğretiyor, kimler için uygun?" }

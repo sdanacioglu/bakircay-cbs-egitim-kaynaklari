@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bakırçay CBS Eğitim Kaynakları</title>
+  <meta name="description" content="CBS, kartografya ve uzaktan algılama öğrenmek için sürekli güncellenen eğitim kaynakları; topluluk üyelerimizin kanalları dahil. İzmir Bakırçay Üniversitesi CBS Topluluğu.">
+  <meta property="og:title" content="Bakırçay CBS Eğitim Kaynakları">
+  <meta property="og:description" content="CBS, kartografya ve uzaktan algılama eğitim kaynakları: ara, filtrele, paylaş.">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="assets/logo.png" alt="BakırçayCBS logosu" width="40" height="40">
+        <span>Bakırçay CBS<small>Eğitim Kaynakları</small></span>
+      </a>
+      <nav class="nav" aria-label="Bağlantılar">
+        <a href="https://sdanacioglu.github.io/bakircay-cbs-acik-veri-kaynaklari/">Açık Veri Kaynakları</a>
+        <a href="data/kaynaklar.csv" download>CSV</a>
+        <a href="https://github.com/sdanacioglu/bakircay-cbs-egitim-kaynaklari">GitHub</a>
+        <a class="cta" href="https://github.com/sdanacioglu/bakircay-cbs-egitim-kaynaklari/issues/new?template=kaynak-oner.yml">Kaynak öner</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">İzmir Bakırçay Üniversitesi · CBS Topluluğu</div>
+        <h1>CBS eğitim kaynakları</h1>
+        <p class="lead">QGIS, ArcGIS, R, Python, kartografya ve uzaktan algılama öğrenmek için seçilmiş videolar, kurslar, kitaplar ve rehberler.
+</p>
+        <div class="stats" id="stats" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="uye-bolum">
+          <div class="uye-baslik">
+            <h2>🎓 Topluluk üyelerimizin kanalları</h2>
+            <p>BakırçayCBS üyelerinin ürettiği içerikler. Takip ederek ve paylaşarak destek olalım!
+              <strong>Sen de bir kanal açtıysan ya da içerik ürettiysen</strong>
+              <a href="https://github.com/sdanacioglu/bakircay-cbs-egitim-kaynaklari/issues/new?template=kaynak-oner.yml">bize bildir</a>
+              ya da <a href="mailto:bakircaycbs@gmail.com">bakircaycbs@gmail.com</a> adresine yaz; burada yer alsın.</p>
+          </div>
+          <div id="uyeler" class="liste"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filters-wrap">
+      <div class="wrap">
+        <h2 class="bolum">📚 Tüm kaynaklar</h2>
+        <form class="filters card" id="filters" role="search" onsubmit="return false">
+          <label class="search">
+            <span class="sr">Ara</span>
+            <input type="search" id="q" placeholder="Ara: QGIS, ArcGIS Pro, kartografya, Earth Engine, R…" autocomplete="off">
+          </label>
+          <div class="selects">
+            <label>Konu <select id="konu"></select></label>
+            <label>Tür <select id="tur"></select></label>
+            <label>Dil <select id="dil"></select></label>
+            <label>Seviye <select id="seviye"></select></label>
+          </div>
+          <div class="toggles">
+            <label><input type="checkbox" id="ucretsiz"> Yalnızca ücretsiz</label>
+            <label><input type="checkbox" id="erisilemeyen"> Erişilemeyenleri de göster</label>
+            <button type="button" class="link" id="temizle">Filtreleri temizle</button>
+          </div>
+        </form>
+        <div class="result-bar">
+          <span id="sayac" aria-live="polite"></span>
+          <button type="button" class="link" id="paylas">🔗 Bu listeyi paylaş</button>
+        </div>
+        <div id="liste" class="liste"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>Hazırlayan:</strong> Dr. Şevki Danacıoğlu, İzmir Bakırçay Üniversitesi Coğrafi Bilgi Sistemleri Topluluğu (BakırçayCBS), 2026.<br>
+        Her kaynağın kendi kullanım koşulları geçerlidir.<br>
+        <a href="https://sdanacioglu.github.io/bakircay-cbs-acik-veri-kaynaklari/">Bakırçay CBS Açık Veri Kaynakları</a> ·
+        <a href="https://sdanacioglu.github.io/30daymapchallenge-2026/">#30DayMapChallenge 2026</a></div>
+      <div>
+        <strong>İletişim</strong><div class="social" aria-label="İletişim"><a href="https://www.instagram.com/bakircaycbs/" target="_blank" rel="noopener" title="Instagram @bakircaycbs" aria-label="Instagram @bakircaycbs"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/in/izmir-bak%C4%B1r%C3%A7ay-cbs-toplulu%C4%9Fu-49ba323bb/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg></a><a href="mailto:bakircaycbs@gmail.com" title="bakircaycbs@gmail.com" aria-label="E-posta: bakircaycbs@gmail.com"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></div>
+        <span id="guncelleme"></span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
